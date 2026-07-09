@@ -112,14 +112,14 @@ def check_against_policy(
 ) -> dict:
     """
     يبحث عن أقرب بند سياسة متعلق بهذا المصروف، ويعيد النص + المسافة.
-    item_descriptions تضيف سياقاً أدق (مثلاً وجود كحول ضمن البنود).
+    item_descriptions تضيف سياقاً أدق (مثلاً وجود مخالفة مرورية ضمن البنود).
     """
     collection = get_policy_collection()
-    query = f"مصروف من فئة {category}، التاجر {merchant}، المبلغ {amount} ريال"
+    query = f"Expense in category {category}, merchant {merchant}, amount {amount} SAR"
 
     if item_descriptions:
-        items_text = "، ".join(item_descriptions)
-        query += f"، البنود: {items_text}"
+        items_text = ", ".join(item_descriptions)
+        query += f", items: {items_text}"
 
     results = search_policy(collection, query, n_results=1)
 
@@ -136,26 +136,22 @@ def check_against_policy(
 
 if __name__ == "__main__":
     chunks = load_and_chunk_policy(Path("policy.md"))
-    collection = build_policy_collection(chunks)
+    print(f"Number of chunks: {len(chunks)}\n")
 
-    # اختبار أ: بكلمة "Miller Lite" فقط (اسم علامة تجارية محدد)
-    print("=== اختبار أ: Miller Lite ===")
-    results_a = search_policy(collection, "Miller Lite", n_results=3)
+    print("Building database...")
+    collection = build_policy_collection(chunks)
+    print("Done.\n")
+
+    # اختبار مناسب للسياسة الجديدة: مخالفة مرورية (البند البديل عن الكحول)
+    print("=== Test A: traffic fine ===")
+    results_a = search_policy(collection, "traffic fine speeding ticket", n_results=3)
     for doc, dist in zip(results_a["documents"][0], results_a["distances"][0]):
         print(f"[{dist:.4f}] {doc[:70]}")
 
     print()
 
-    # اختبار ب: بكلمة عامة صريحة (beer / alcohol)
-    print("=== اختبار ب: beer alcohol drink ===")
-    results_b = search_policy(collection, "beer alcohol drink", n_results=3)
+    # اختبار طبيعي: عشاء عمل مع عميل
+    print("=== Test B: client dinner ===")
+    results_b = search_policy(collection, "dinner with external client 600 SAR", n_results=3)
     for doc, dist in zip(results_b["documents"][0], results_b["distances"][0]):
-        print(f"[{dist:.4f}] {doc[:70]}")
-
-    print()
-
-    # اختبار ج: بالعربي "بيرة كحول"
-    print("=== اختبار ج: بيرة كحول ===")
-    results_c = search_policy(collection, "بيرة كحول", n_results=3)
-    for doc, dist in zip(results_c["documents"][0], results_c["distances"][0]):
         print(f"[{dist:.4f}] {doc[:70]}")

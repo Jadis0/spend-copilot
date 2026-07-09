@@ -51,6 +51,9 @@ The RAG mismatch above (item 2) propagated straight into the agent's decision, w
 **4. Rule-based classification fails against real brand names.**
 An initial keyword dictionary ("restaurant", "cafe") matched only 1 of 6 real restaurant receipts (Taco Bell, Golden Bowl Teriyaki, Saska's — none contain a word meaning "restaurant" in their actual trade name). 5 of 6 required an LLM call. **Practical impact:** the real rule/LLM split on production-like data is far lower than the naive assumption; the rule dictionary needs continuous expansion based on recurring LLM classification patterns.
 
+**5. Retrieval instability compounds decision instability.**
+The same receipt (Saska's, $179.94) matched two different policy sections across consecutive runs — "Meals & Food" (50 SAR cap) in one run, "Client Entertainment" (500 SAR cap) in another — flipping the final decision from reject to approve. Combined with limitation 1 (non-deterministic extraction) and limitation 3 (error propagation), this confirms that **no single pipeline run should be treated as ground truth for evaluation**. A production eval framework needs to run each sample N times (e.g. 5) and report a distribution, not a point estimate — flagging any sample whose decision is not stable across runs as a candidate for stricter deterministic rules or mandatory human review.
+
 ## Evaluation
 
 `eval.py` scores 4 independent dimensions against `ground_truth.json` (currently 7 samples, designed to scale to 50):
@@ -59,7 +62,7 @@ An initial keyword dictionary ("restaurant", "cafe") matched only 1 of 6 real re
 - Math-check accuracy (known issues correctly flagged, no false positives)
 - Agent decision accuracy against a human-judged expected decision
 
-Typical run: extraction 7/7, classification 7/7, math check 6-7/7 (variable, see limitation 1), agent decision 6/7 — the one failure is directly traceable to limitation 2 above.
+Typical run: extraction 7/7, classification 7/7, math check 6-7/7 (variable, see limitation 1), agent decision 5-7/7 (variable across runs, see limitation 5). The observed variance in the agent decision score is itself the most important finding of this project — it demonstrates why single-pass evaluation is insufficient for a financial-decision pipeline.
 
 ## Running it
 

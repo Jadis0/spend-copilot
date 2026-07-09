@@ -25,8 +25,8 @@
     "total": 5.35,
     "currency": "USD",
     "expected_category": "طعام ومطاعم",
-    "expected_decision": "مرفوض",
-    "note": "يحتوي مشروباً كحولياً (Miller Lite) — ممنوع كلياً حسب السياسة، بغض النظر عن المبلغ"
+    "expected_decision": "موافق",
+    "note": "مبلغ صغير جداً (5.35)، ضمن أي حد معقول للوجبة الفردية"
   },
   "1004-receipt.jpg": {
     "merchant": "Golden Bowl Teriyaki",

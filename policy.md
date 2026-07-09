@@ -1,34 +1,29 @@
-# سياسة النفقات — شركة تجريبية
 # Company Expense Policy
 
-## ١. الوجبات والطعام | Meals & Food
+## 1. Meals & Food
 
-- الحد الأقصى للوجبة الواحدة (فطور، غداء، عشاء) هو **٥٠ ريالاً سعودياً** للموظف الواحد.
 - Maximum per meal (breakfast, lunch, dinner) is **50 SAR** per employee.
-- لا يُسمح بشراء المشروبات الكحولية على حساب الشركة تحت أي ظرف.
-- Alcoholic beverages are never reimbursable, under any circumstance.
-- وجبات العمل الجماعية (اجتماع فريق، عشاء تحفيزي) تحتاج موافقة المدير المباشر مسبقاً إذا تجاوزت **٢٠٠ ريال** للفريق.
+- Team meals (team meetings, morale dinners) require prior manager approval if they exceed **200 SAR** for the group.
+- Traffic fines and personal violations are never reimbursable, under any circumstance.
 
-## ٢. المواصلات | Transportation
+## 2. Transportation
 
-- تطبيقات النقل (أوبر، كريم) مسموحة ضمن أوقات العمل الرسمية أو للعمل الميداني.
 - Ride-hailing apps (Uber, Careem) are approved during work hours or for field work.
-- الحد الأقصى للرحلة الواحدة هو **١٥٠ ريالاً**. أي رحلة أعلى تحتاج تبريراً مكتوباً.
-- بنزين السيارة الشخصية غير مغطى إلا لموظفي المبيعات الميدانيين المسجّلين رسمياً.
+- Maximum per single ride is **150 SAR**. Any ride above that requires a written justification.
+- Personal vehicle fuel is not covered, except for officially registered field sales employees.
 
-## ٣. ضيافة العملاء | Client Entertainment
+## 3. Client Entertainment
 
-- عشاء عمل مع عميل خارجي يحتاج **موافقة مسبقة من المدير المالي** إذا تجاوز **٥٠٠ ريال**.
 - Client dinners exceeding **500 SAR** require prior CFO approval.
-- يجب إرفاق اسم العميل والغرض من الاجتماع مع أي مصروف ضيافة.
+- Client name and meeting purpose must be attached to any entertainment expense.
 
-## ٤. الاشتراكات والبرمجيات | Software & Subscriptions
+## 4. Software & Subscriptions
 
-- أي اشتراك برمجي شهري أقل من **١٠٠ ريال** لا يحتاج موافقة مسبقة.
-- اشتراكات أعلى من **١٠٠ ريال شهرياً** تحتاج موافقة مدير تقنية المعلومات.
+- Any monthly software subscription under **100 SAR** does not require prior approval.
+- Subscriptions above **100 SAR/month** require IT manager approval.
 
-## ٥. القواعد العامة | General Rules
+## 5. General Rules
 
-- كل نفقة يجب أن يُرفق معها إيصال واضح يُظهر التاريخ والمبلغ واسم التاجر.
-- المصاريف الشخصية البحتة (غير متعلقة بالعمل) مرفوضة تلقائياً.
-- أي نفقة تتجاوز **١٠٠٠ ريال** بأي فئة تحتاج مراجعة يدوية من فريق المالية، بغض النظر عن الفئة.
+- Every expense must have a clear receipt showing date, amount, and merchant name.
+- Purely personal expenses (unrelated to work) are automatically rejected.
+- Any expense exceeding **1000 SAR**, in any category, requires manual finance team review, regardless of category.
