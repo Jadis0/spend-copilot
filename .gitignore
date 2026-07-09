@@ -1,0 +1,8 @@
+﻿.venv/
+.env
+__pycache__/
+*.pyc
+
+chroma_data/
+
+receipts/large-receipt-image-dataset-SRD/

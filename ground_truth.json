@@ -1,0 +1,54 @@
+{
+  "1000-receipt.jpg": {
+    "merchant": "GREEN FIELD",
+    "total": 56.58,
+    "currency": "USD",
+    "expected_category": "طعام ومطاعم",
+    "expected_decision": "مراجعة"
+  },
+  "1001-receipt.jpg": {
+    "merchant": "Grand Lux Cafe",
+    "total": 69.25,
+    "currency": "USD",
+    "expected_category": "طعام ومطاعم",
+    "expected_decision": "مراجعة"
+  },
+  "1002-receipt.jpg": {
+    "merchant": "Taco Bell",
+    "total": 7.61,
+    "currency": "USD",
+    "expected_category": "طعام ومطاعم",
+    "expected_decision": "موافق"
+  },
+  "1003-receipt.jpg": {
+    "merchant": "El Gran Mar de Plata",
+    "total": 5.35,
+    "currency": "USD",
+    "expected_category": "طعام ومطاعم",
+    "expected_decision": "مرفوض",
+    "note": "يحتوي مشروباً كحولياً (Miller Lite) — ممنوع كلياً حسب السياسة، بغض النظر عن المبلغ"
+  },
+  "1004-receipt.jpg": {
+    "merchant": "Golden Bowl Teriyaki",
+    "total": 15.03,
+    "currency": "USD",
+    "expected_category": "طعام ومطاعم",
+    "expected_decision": "موافق"
+  },
+  "1005-receipt.jpg": {
+    "merchant": "Saska's",
+    "total": 179.94,
+    "currency": "USD",
+    "expected_category": "طعام ومطاعم",
+    "expected_decision": "مرفوض",
+    "note": "مجموع البنود الصحيح = 167.00، النظام يكتشف تعارضاً حسابياً صح"
+  },
+  "20832-la-cuenta.jpg": {
+    "merchant": "Hotel Restaurante El Cruce",
+    "total": 36.00,
+    "currency": "EUR",
+    "expected_category": "طعام ومطاعم",
+    "expected_decision": "مرفوض",
+    "note": "مجموع البنود الصحيح = 32.73، النظام يكتشف تعارضاً حسابياً صح"
+  }
+}
